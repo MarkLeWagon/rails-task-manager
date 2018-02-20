@@ -1,0 +1,16 @@
+<!-- pe/er shortcut -->
+
+<h1> All Tasks </h1>
+
+<!--   needed to determine a prefix to work. create tasks_show path in routes to function-->
+<% @tasks.each do |t| %>
+<li><%= link_to t.title, task_path(t) %>
+<% t.details %>
+<% t.text %>
+<% if t.completed %>
+  <input type="checkbox" checked="">
+  <% else %>
+    <input type="checkbox">
+<% end %>
+</li>
+<% end %>

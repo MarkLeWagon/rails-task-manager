@@ -1,0 +1,12 @@
+
+<!-- no forms in show, same syntax to use as index -->
+<li>
+<%= @task.details %>
+<%= @task.text %>
+
+  <input type="checkbox" checked="" value=<%= @task.completed %>>
+
+<!-- link_to 'text' then url created a link back to a specific url-->
+<%= link_to 'back', tasks_path  %>
+</li>
+
